@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/62fdb74148.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="screen list-screen" id="list-screen">
+        <div class="container">
+            <!-- top menu for list-screen -->
+            <header>
+                <button class="button hamburger-button" id="hamburger-button">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <button class="button search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </header>
+            <h1 class="greetings">What's up, <span id="profile-name">ryuzaki</span>!</h1>
+            <!-- categories section -->
+            <section class="categories">
+                <p class="section-title">
+                    categories
+                </p>
+                <div class="category-items">
+                    <!-- single category item start -->
+                    <div class="category-item selected" id="business">
+                        <p>
+                            <span class="task-left" id="business-task-count">10</span> tasks
+                        </p>
+                        <h3 class="category-title">
+                            Business
+                        </h3>
+                        <div class="task-progress">
+                            <div class="task-progress-completed" id='businessWidth'></div>
+                        </div>
+                    </div>
+                    <!-- single category item end -->
+                    <!-- single category item start -->
+                    <div class="category-item" id="personal">
+                        <p>
+                            <span class="task-left" id="personal-task-count">10</span> tasks
+                        </p>
+                        <h3 class="category-title">
+                            Personal
+                        </h3>
+                        <div class="task-progress">
+                            <div class="task-progress-completed" id='personalWidth'></div>
+                        </div>
+                    </div>
+                    <!-- single category item end -->
+                </div>
+            </section>
+            <section class="task-list" id="task-list">
+                <p class="section-title">
+                     tasks
+                </p>
+                <ul class="task-list-element " id="task-list-element">
+                    <!-- every li goes here via js -->
+                </ul>
+            </section>
+            <form action="#" id="form">
+                <div class="input-toggle">
+                    <input type="text" placeholder="Input your task" id="input" class="input">
+                    <button class="add-task" id="add-task">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="screen  menu-screen" id="menu-screen">
+        <div class="container">
+            <header>
+                <button class="button close-button" id="close-button">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </header>
+            <div class="profile-photo-container">
+                <div class="profile-photo"></div>
+            </div>
+            <h1 class="profile-name" id="profile-name">
+                Samir ryuzaki
+            </h1>
+            <ul class="features">
+                <li>
+                    <i class="fas fa-th-large"></i>
+                    <span class="feature category " id="category">
+                        Category
+                        
+                    </span>
+                    <div class="category-select" id="category-select">
+                        <button id="business" class="category-select-items">Business</button>
+                        <button id="personal" class="category-select-items">Personal</button>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-chart-pie"></i>
+                    <span class="feature" id="analytics">
+                        Analytics
+                    </span>
+                    
+                </li>
+            </ul>
+            <div class="analytics-showcase">
+                <div class="analytics-graph-container" id="analytics-graph-container">
+                    <span class="analytics-line normal" id="analytics-line"></span>
+                </div>
+                <div class="consistency-comment-container">
+                    <p class="consistancy-comment" id="consistancy-comment">Not Rated</p>
+                    <h3 id="consistancy" class="consitancy">Consistancy
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
